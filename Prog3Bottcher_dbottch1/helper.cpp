@@ -43,8 +43,20 @@ void Helper::generate_no_locality() {
 }
 
 void Helper::generate_e_t() {
+	int i;
+	srand(time(NULL));
+	cout << "80\% of accesses(hot pages)\n";
+	for(int i = 0; i < this->accesses * 0.8; i++) {
+		unsigned int num = (rand() % this->pages * .2) + 1;
+		e_t_res.push_back(num);
+	}
+	cout << "Remaining 20% (cold pages)\n";
+	for(;i < accesses; i++) {
+		unsigned int num  = (rand() % (int)(this->pages - this->pages * .2) + (int)(this->pages * .2));
+		e_t_res.push_back(num);
+	}
+	random_shuffle(e_t_res.begin(), e_t_res.end());
 }
-
 unsigned int Helper::getNumPages() {
 	return this->pages;
 }
