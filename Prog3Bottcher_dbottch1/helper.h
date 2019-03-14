@@ -22,6 +22,17 @@ class Helper {
 		vector<unsigned int> getET_R();
 		vector<unsigned int> getLP_R();
 		friend ostream& operator<<(ostream& os, Helper h);
+		void outputCSV(ostream& o, int cache_size, int opt, int lru, int fifo, int rand, int clock);
+		
+
+
+		//Matt
+		unsigned int LRU(vector<unsigned int> workload, int cache_size);
+		unsigned int Rand(vector<unsigned int> workload, int cache_size);
+		unsigned int FIFO(vector<unsigned int> workload, int cache_size);
+		unsigned int OPT(vector<unsigned int> workload, int cache_size);
+		unsigned int Clock(vector<unsigned int> workload, int cache_size);
+
 	private:
 		unsigned int pages;
 		unsigned int accesses;
