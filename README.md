@@ -9,5 +9,7 @@ Prog2 = Process Tree (fork() and exec())
 
 Prog3 = Page Replacement Algorithms and Generating Workloads (partner assignment)
 
-Prog4 = ??
+Prog4 = Multithreading (partner assignment)
+
+Prog5 = Log Structured File System (group assignment)
 
