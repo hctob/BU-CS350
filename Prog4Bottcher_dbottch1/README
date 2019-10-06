@@ -1,0 +1,15 @@
+CS350 Assignment #4 - Multithreading Reader/Writer Problem - Writer Preference
+Daniel Bottcher & Matthew Van Gorden
+dbottch1 & mvangor3
+
+Makefile: 
+    make/make all: generates readwrite executable and main.o file
+
+    make clean: removes all output (reader_#.txt) files, object files, and executable from directory 
+
+Usage: 
+readwrite <Number of reads/writes per thread> <Number of reader threads> <Number of Writer threads>
+
+Ex: ./readwrite 40 3 7
+
+
